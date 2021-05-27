@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-!p8l&e+i(%9z(#=)+4)!*if6ero#r4h+n&cpn5ubs9y4zyg02c
 
 # Application definition
 
-INSTALLED_APPS = [
+BASE_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -34,6 +34,16 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 ]
+LOCAL_APPS = [
+    'backend_api.users',
+    'backend_api.entitys'
+]
+
+THIRD_APPS = [
+
+]
+
+INSTALLED_APPS = LOCAL_APPS + THIRD_APPS + BASE_APPS
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
