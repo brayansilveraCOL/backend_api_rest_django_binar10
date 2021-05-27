@@ -1,0 +1,14 @@
+
+.idea/backend_api_rest_django_binar10.iml
+.idea/inspectionProfiles/profiles_settings.xml
+.idea/inspectionProfiles/Project_Default.xml
+.idea/misc.xml
+.idea/modules.xml
+.idea/vcs.xml
+config/__pycache__/__init__.cpython-39.pyc
+config/__pycache__/urls.cpython-39.pyc
+config/__pycache__/wsgi.cpython-39.pyc
+config/db.sqlite3
+config/settings/__pycache__/__init__.cpython-39.pyc
+config/settings/__pycache__/base.cpython-39.pyc
+config/settings/__pycache__/local.cpython-39.pyc
