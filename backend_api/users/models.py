@@ -1,29 +1,29 @@
-from django.db import models
-
-# import Base Model
-from backend_api.utils.baseModel import BaseModel
-
-# import Models
-from backend_api.entitys.models import Entity
-
-# Python Libraries
 import uuid
 
+from django.db import models
+# Utils
+from django.contrib.auth.models import AbstractUser
 
-# Create your models here.
+# Models Import
+from backend_api.entitys.models import Entity
+from backend_api.locations.models import Country
 
-class Customer(BaseModel):
+
+class User(AbstractUser):
     """
-    Class for Customer
+    Class User extend  Abstract User
     """
+    email = models.EmailField('email address', unique=True)
+    first_name = models.CharField('First Name', max_length=255, blank=False, null=False)
+    last_name = models.CharField('Last Name', max_length=255, blank=False, null=False)
     uniqueCode = models.UUIDField('Code Unique Generate', default=uuid.uuid4, editable=False, unique=True)
-    name = models.CharField('name user', max_length=255, blank=False, null=False)
-    lastName = models.CharField('last name user', max_length=255, blank=False, null=False)
-    email = models.EmailField('email user')
     identify = models.CharField('identify user', max_length=255, blank=False, null=False, unique=True)
-    image = models.ImageField('Photo', upload_to='perfil/', max_length=255, null=True, blank=True)
-    password = models.CharField('password user', max_length=300, blank=False, null=False)
-    entity = models.ForeignKey(Entity, on_delete=models.CASCADE, null=True, blank=True)
+    image = models.ImageField('Photo', upload_to='profile/', max_length=255, null=True, blank=True)
+    entity = models.ForeignKey(Entity, on_delete=models.CASCADE, null=True)
+    country = models.ForeignKey(Country, on_delete=models.CASCADE, null=True)
+
+    USERNAME_FIELD = 'email'
+    REQUIRED_FIELDS = ['username']
 
     def __str__(self):
-        return "{} {}".format(self.name, self.lastName)
+        return self.email

@@ -1,0 +1,1037 @@
+{
+	"info": {
+		"_postman_id": "d375526a-32b9-4929-ba37-ea1fae866e7b",
+		"name": "backend_api_binario",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "login",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjIyMTc0ODAxLCJqdGkiOiJkMThjMzQwMzgwZDE0OGUxOTYzYmRkN2RjYTFlOTFlZCIsInVzZXJfaWQiOjF9.4hbYdFoz0Vg8vm4a_Afx0fkJG698kxsrSRdkjV2HDcs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"brayan@hotmail.com\",\r\n    \"password\": \"Sl1200mk2.\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/login/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"login",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Upload Image User",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjIyMjY3Njc1LCJqdGkiOiI3YTk2YjhhZmI4NTM0OTllOTM5NWZlZTEyOTczNTdmZCIsInVzZXJfaWQiOjF9.lKTmhd_oOP6IyZevCs1XgouKjynHPgJSkSJWGYPyqNs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/bsilvera/Desktop/cart_Det.png"
+								}
+							],
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/user/5520e6b11e654468980fb9cbbb220990/upload/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"user",
+								"5520e6b11e654468980fb9cbbb220990",
+								"upload",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update User",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjIyMjY3Njc1LCJqdGkiOiI3YTk2YjhhZmI4NTM0OTllOTM5NWZlZTEyOTczNTdmZCIsInVzZXJfaWQiOjF9.lKTmhd_oOP6IyZevCs1XgouKjynHPgJSkSJWGYPyqNs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"first_name\": \"dasdasd\",\r\n    \"last_name\": \"adsdas\",\r\n    \"entity\":1,\r\n    \"country\":1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/user/41daca2124384a28bfcdfcce8d7354a2/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"user",
+								"41daca2124384a28bfcdfcce8d7354a2",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Filter All User",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjIyMjY3Njc1LCJqdGkiOiI3YTk2YjhhZmI4NTM0OTllOTM5NWZlZTEyOTczNTdmZCIsInVzZXJfaWQiOjF9.lKTmhd_oOP6IyZevCs1XgouKjynHPgJSkSJWGYPyqNs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/user/?search=900253001",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"user",
+								""
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": "900253001"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "All Users",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjIyMjY3Njc1LCJqdGkiOiI3YTk2YjhhZmI4NTM0OTllOTM5NWZlZTEyOTczNTdmZCIsInVzZXJfaWQiOjF9.lKTmhd_oOP6IyZevCs1XgouKjynHPgJSkSJWGYPyqNs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/user/1cbb1502-d862-4e34-9a12-9e731e746277/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"user",
+								"1cbb1502-d862-4e34-9a12-9e731e746277",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Detail User",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjIyMjY3Njc1LCJqdGkiOiI3YTk2YjhhZmI4NTM0OTllOTM5NWZlZTEyOTczNTdmZCIsInVzZXJfaWQiOjF9.lKTmhd_oOP6IyZevCs1XgouKjynHPgJSkSJWGYPyqNs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/user/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"user",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create User",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjIyMzEyMjk2LCJqdGkiOiI0NzVkNzIzYjYyZDA0ZmI2OWQzOGUxZDVjNDRhMmM2NCIsInVzZXJfaWQiOjF9.1hiRf8W5MVjoaxn4Ao7Idjlo0jH4JIXvho9Oujot0r4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"password\": \"bsilvera\",\r\n    \"password_confirmation\": \"bsilvera\",\r\n    \"username\": \"bsilvera22224\",\r\n    \"email\": \"bsilvera22224@Google.com\",\r\n    \"first_name\": \"bsilvera\",\r\n    \"last_name\": \"bsilvera\",\r\n    \"identify\": \"bsilvera22224-0\",\r\n    \"entity\":1,\r\n    \"country\":1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/signup/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"signup",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Type Entity",
+			"item": [
+				{
+					"name": "Create Type Entity",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjIyMzEzMDQ5LCJqdGkiOiIyMTVlNTE4MGZkMzE0NDUyOGViOWY5NTg2OWEwNWRjYiIsInVzZXJfaWQiOjF9.KdTzuRUOFTG7cHPoaf8I3d17s28YqTa93ogFT5PORFU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"ARL\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/typeEntity/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"typeEntity",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "All Type Entity",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjIyMjYxNDU5LCJqdGkiOiI2YTBlMjFkNjc0NGI0YzNmODU1ZTk2MjRiZjJlM2I3MiIsInVzZXJfaWQiOjF9.1xJUUb7A1WEWyviHoM5-uwh1oOZsHkjtSevCj45cw08",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"ARL\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/typeEntity/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"typeEntity",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Detail Type Entity",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjIyMjYxNDU5LCJqdGkiOiI2YTBlMjFkNjc0NGI0YzNmODU1ZTk2MjRiZjJlM2I3MiIsInVzZXJfaWQiOjF9.1xJUUb7A1WEWyviHoM5-uwh1oOZsHkjtSevCj45cw08",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"ARL\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/typeEntity/07198833-60e5-4c80-9e75-a5c4d05f60b2/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"typeEntity",
+								"07198833-60e5-4c80-9e75-a5c4d05f60b2",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Partial Update Type Entity",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjIyMjYxNDU5LCJqdGkiOiI2YTBlMjFkNjc0NGI0YzNmODU1ZTk2MjRiZjJlM2I3MiIsInVzZXJfaWQiOjF9.1xJUUb7A1WEWyviHoM5-uwh1oOZsHkjtSevCj45cw08",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"ARL\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/typeEntity/07198833-60e5-4c80-9e75-a5c4d05f60b2/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"typeEntity",
+								"07198833-60e5-4c80-9e75-a5c4d05f60b2",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Type Entity",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjIyMjYxNDU5LCJqdGkiOiI2YTBlMjFkNjc0NGI0YzNmODU1ZTk2MjRiZjJlM2I3MiIsInVzZXJfaWQiOjF9.1xJUUb7A1WEWyviHoM5-uwh1oOZsHkjtSevCj45cw08",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"ARL\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/typeEntity/07198833-60e5-4c80-9e75-a5c4d05f60b2/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"typeEntity",
+								"07198833-60e5-4c80-9e75-a5c4d05f60b2",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Type Entity",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjIyMjYxNDU5LCJqdGkiOiI2YTBlMjFkNjc0NGI0YzNmODU1ZTk2MjRiZjJlM2I3MiIsInVzZXJfaWQiOjF9.1xJUUb7A1WEWyviHoM5-uwh1oOZsHkjtSevCj45cw08",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"ARL\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/typeEntity/07198833-60e5-4c80-9e75-a5c4d05f60b2/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"typeEntity",
+								"07198833-60e5-4c80-9e75-a5c4d05f60b2",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Entity",
+			"item": [
+				{
+					"name": "All Entity",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjIyMjYxNDU5LCJqdGkiOiI2YTBlMjFkNjc0NGI0YzNmODU1ZTk2MjRiZjJlM2I3MiIsInVzZXJfaWQiOjF9.1xJUUb7A1WEWyviHoM5-uwh1oOZsHkjtSevCj45cw08",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/entity/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"entity",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Detail Entity",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjIyMjYxNDU5LCJqdGkiOiI2YTBlMjFkNjc0NGI0YzNmODU1ZTk2MjRiZjJlM2I3MiIsInVzZXJfaWQiOjF9.1xJUUb7A1WEWyviHoM5-uwh1oOZsHkjtSevCj45cw08",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/entity/1028b7f9-1233-49b0-8918-5ee1dca47b06/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"entity",
+								"1028b7f9-1233-49b0-8918-5ee1dca47b06",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Partial Update Entity",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjIyMjYxNDU5LCJqdGkiOiI2YTBlMjFkNjc0NGI0YzNmODU1ZTk2MjRiZjJlM2I3MiIsInVzZXJfaWQiOjF9.1xJUUb7A1WEWyviHoM5-uwh1oOZsHkjtSevCj45cw08",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"comparta\",\r\n    \"typeEntity\":1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/entity/1028b7f9-1233-49b0-8918-5ee1dca47b06/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"entity",
+								"1028b7f9-1233-49b0-8918-5ee1dca47b06",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Entity",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjIyMjYxNDU5LCJqdGkiOiI2YTBlMjFkNjc0NGI0YzNmODU1ZTk2MjRiZjJlM2I3MiIsInVzZXJfaWQiOjF9.1xJUUb7A1WEWyviHoM5-uwh1oOZsHkjtSevCj45cw08",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/entity/1028b7f9-1233-49b0-8918-5ee1dca47b06/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"entity",
+								"1028b7f9-1233-49b0-8918-5ee1dca47b06",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Entity",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjIyMjYxNDU5LCJqdGkiOiI2YTBlMjFkNjc0NGI0YzNmODU1ZTk2MjRiZjJlM2I3MiIsInVzZXJfaWQiOjF9.1xJUUb7A1WEWyviHoM5-uwh1oOZsHkjtSevCj45cw08",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"comparta\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/entity/1028b7f9-1233-49b0-8918-5ee1dca47b06/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"entity",
+								"1028b7f9-1233-49b0-8918-5ee1dca47b06",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Entity",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjIyMjY3Njc1LCJqdGkiOiI3YTk2YjhhZmI4NTM0OTllOTM5NWZlZTEyOTczNTdmZCIsInVzZXJfaWQiOjF9.lKTmhd_oOP6IyZevCs1XgouKjynHPgJSkSJWGYPyqNs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"SURA\",\r\n    \"typeEntity\":1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/entity/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"entity",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Location",
+			"item": [
+				{
+					"name": "Country",
+					"item": [
+						{
+							"name": "All Country",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjIyMjc0MzQ3LCJqdGkiOiIzNWFkMmI3NTFlZDQ0OTc2OWQxMjk5Mjg2MDY4ZWMyNSIsInVzZXJfaWQiOjF9.d_SeLSL7dxwvfcjoJbPEr1YYtGU8l2sYjAj0luoQhwA",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/country/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"country",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Detail Country",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjIyMjc0MzQ3LCJqdGkiOiIzNWFkMmI3NTFlZDQ0OTc2OWQxMjk5Mjg2MDY4ZWMyNSIsInVzZXJfaWQiOjF9.d_SeLSL7dxwvfcjoJbPEr1YYtGU8l2sYjAj0luoQhwA",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/country/1028b7f9-1233-49b0-8918-5ee1dca47b06/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"country",
+										"1028b7f9-1233-49b0-8918-5ee1dca47b06",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Partial Update Country",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjIyMjc0MzQ3LCJqdGkiOiIzNWFkMmI3NTFlZDQ0OTc2OWQxMjk5Mjg2MDY4ZWMyNSIsInVzZXJfaWQiOjF9.d_SeLSL7dxwvfcjoJbPEr1YYtGU8l2sYjAj0luoQhwA",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\"comparta\",\r\n    \"long\":1,\r\n    \"lat\":1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/country/1028b7f9-1233-49b0-8918-5ee1dca47b06/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"country",
+										"1028b7f9-1233-49b0-8918-5ee1dca47b06",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Country",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjIyMjYxNDU5LCJqdGkiOiI2YTBlMjFkNjc0NGI0YzNmODU1ZTk2MjRiZjJlM2I3MiIsInVzZXJfaWQiOjF9.1xJUUb7A1WEWyviHoM5-uwh1oOZsHkjtSevCj45cw08",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/country/1028b7f9-1233-49b0-8918-5ee1dca47b06/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"country",
+										"1028b7f9-1233-49b0-8918-5ee1dca47b06",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Country",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjIyMjYxNDU5LCJqdGkiOiI2YTBlMjFkNjc0NGI0YzNmODU1ZTk2MjRiZjJlM2I3MiIsInVzZXJfaWQiOjF9.1xJUUb7A1WEWyviHoM5-uwh1oOZsHkjtSevCj45cw08",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\"comparta\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/country/1028b7f9-1233-49b0-8918-5ee1dca47b06/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"country",
+										"1028b7f9-1233-49b0-8918-5ee1dca47b06",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create Country",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjIyMzEwNTk0LCJqdGkiOiIyNWEwZDc2ZmM2Yjk0MDcyYjkyYWM3MjhmZWFkYWQ5NSIsInVzZXJfaWQiOjF9.WthptuzKZEYyRQoL4fO8d0nfSq1KLJc1VKoWFAAC-Vs",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\"CO\",\r\n    \"long\":100.000,\r\n    \"lat\":100.900\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/country/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"country",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
