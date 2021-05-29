@@ -13,6 +13,14 @@ Ejecutar en la raiz del proyecto
 - python manage.py createsuperuser
 - python manage.py runserver
 
+# Primeros Pasos
+
+Para empezar a trabajar con el superusuario creado y generado el token debe crear
+Type Entity's
+Entity's 
+Country
+ya que Entity y Country son Requeridos para la creacion del Usuario
+
 # Objetos
 
 * Entity's =  Entidades
