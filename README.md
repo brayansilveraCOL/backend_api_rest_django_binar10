@@ -36,7 +36,7 @@ ya que Entity y Country son Requeridos para la creacion del Usuario
 * Locations Country: CRUD Para Paises, Se busca por el uniqueCode
 * Utils: Tiene las clases abstractas para otros objetos
 
-* Users: 
+* Users: CRUD y auth de la aplicacion
 
 # Auth
 Realizar Request a la ruta login/ se envian parametors email y password retorna access y refresh token
