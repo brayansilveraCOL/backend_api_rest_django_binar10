@@ -55,4 +55,11 @@ Realizar Request a la ruta login/ se envian parametors email y password retorna 
 
 https://documenter.getpostman.com/view/10748947/TzXzCcXu
 
+# Credenciales Productivo para Prueba
+
+{
+    "email": "brayan@hotmail.com",
+    "password": "Sl1200mk2."
+}
+
 
